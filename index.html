@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/inicio.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+
+    <title>Expresate</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="banner_img">
+            <img src="IMG/bienvenida.png">
+        </div>
+
+        <div class="banner_title">
+            <h1>Bienvenidos</h1>
+
+            <h2>"Clickeé en <u><b>comenzar</b></u> para ir al menú principal"</h2>
+
+            <a class="buttonIndex" onclick="abrirForm();">Comenzar</a>
+        </div>
+    </div>
+
+
+    <div class="formulario">
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup" onclick="cerrarForm()"><i
+                        class="fas fa-times"></i></a>
+
+                <h3>Bienvenidos a <i>Expresate</i></h3>
+                <h4>Ingrese sus datos por favor.</h4>
+
+                <form>
+                    <div class="contenedor-inputs">
+                        <input type="text" id="nomU" placeholder="Nombres" required>
+                        <input type="text" id="apeU" placeholder="Apellidos" required>
+                        <input type="text" id="depaU" placeholder="Departamento" required>
+                        <input type="text" id="distU" placeholder="Distrito" required>
+                    </div>
+
+                    <a class="btn-form" onclick="agregarDatos();">Registrar Datos</a>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/mensaje.js"></script>
+
+</body>
+
+</html>

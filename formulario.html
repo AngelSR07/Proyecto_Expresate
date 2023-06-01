@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/formulario.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+
+    <title>Expresate</title>
+</head>
+
+<body>
+
+    <header>
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu"><i class="fas fa-bars"></i>&nbsp;&nbsp;Menú</label>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="menuPrincipal.html"><i class="fas fa-home"></i>&nbsp;&nbsp;Inicio</a></li>
+                <li><a href="sobreMi.html">Sobre mi</a></li>
+                <li><a href="personas.html">Personas</a></li>
+                <li><a href="numeros.html">Números</a></li>
+                <li><a href="cuerpo.html">Cuerpo</a></li>
+                <li><a href="comoMeSiento.html">¿Cómo me siento?</a></li>
+                <li><a href="#" onclick="" style="color: rgb(106,35,221); font-style: italic;"><i
+                            class="fas fa-cogs"></i>&nbsp;&nbsp;<u>Configuración</u></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="cuerpo">
+
+        <form>
+            <div class="form">
+                <h1>Modificar Datos</h1>
+
+                <div class="grupo">
+                    <input type="text" id="nomU1" required><samp class="barra"></samp>
+                    <label for="nom">Nombres</label>
+                </div>
+
+                <div class="grupo">
+                    <input type="text" id="apeU1" required><samp class="barra"></samp>
+                    <label for="nom">Apellidos</label>
+                </div>
+
+                <div class="grupo">
+                    <input type="text" id="depaU1" required><samp class="barra"></samp>
+                    <label for="nom">Departamento</label>
+                </div>
+
+                <div class="grupo">
+                    <input type="text" id="distU1" required><samp class="barra"></samp>
+                    <label for="nom">Provincia</label>
+                </div>
+
+                <div class="botones">
+                    <a onclick="modificarDatos();">Cambiar datos</a>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="JS/mensaje.js"></script>
+
+</body>
+
+</html>

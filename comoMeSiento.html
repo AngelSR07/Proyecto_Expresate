@@ -16,22 +16,32 @@
 </head>
 
 <body>
-
     <header>
+        
         <input type="checkbox" id="btn-menu">
         <label for="btn-menu"><i class="fas fa-bars"></i>&nbsp;&nbsp;Menú</label>
 
-        <nav class="menu">
+        <nav class="menu" id="menu">
             <ul>
-                <li><a href="menuPrincipal.html" onclick="cambiarPag()"><i
-                            class="fas fa-home"></i>&nbsp;&nbsp;Inicio</a></li>
-                <li><a href="sobreMi.html"><u>Sobre mi</u></a></li>
-                <li><a href="personas.html" onclick="cambiarPag()">Personas</a></li>
-                <li><a href="numeros.html" onclick="cambiarPag()">Números</a></li>
-                <li><a href="cuerpo.html" onclick="cambiarPag()">Cuerpo</a></li>
-                <li><a href="#" style="color: rgb(106,35,221); font-style: italic;"><u>¿Cómo me siento?</u></a></li>
-                <li><a href="formulario.html" onclick="mostrarDatos()"><i
-                            class="fas fa-cogs"></i>&nbsp;&nbsp;Configuración</a></li>
+                <li>
+                    <a onclick="cambiarPag()">
+                        <i class="fas fa-home"></i> &nbsp;&nbsp;Inicio
+                    </a>
+                </li>
+                <li><a onclick="cambiarPag_SobreMi()"><u>Sobre mi</u></a></li>
+                <li><a onclick="cambiarPag_Personas()">Personas</a></li>
+                <li><a onclick="cambiarPag_Numeros()">Números</a></li>
+                <li><a onclick="cambiarPag_Cuerpos()">Cuerpo</a></li>
+                <li class="blocked">
+                    <a href="#">
+                        <u>¿Cómo me siento?</u>
+                    </a>
+                </li>
+                <li>
+                    <a href="formulario.html">
+                        <i class="fas fa-cogs"></i>&nbsp;&nbsp;Configuración
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -48,10 +58,8 @@
 
                 <div class="btn-centrar">
                     <div class="group1">
-                        <a href="menuPrincipal.html" onclick="cambiarPag()">
-                            <button id="volver">
-                            </button>
-                        </a>
+                        <button id="volver" class="boton-menu" onclick="cambiarPag()" value="volver">
+                        </button>
 
                         <button id="btnMsj" onclick="mensaje('IMG/ComoMeSiento/feliz.jpg','Me siento feliz')">
                             <img src="IMG/ComoMeSiento/feliz.jpg">
@@ -62,7 +70,6 @@
                             <img src="IMG/ComoMeSiento/dolor.jpg">
                             <h1>Dolor</h1>
                         </button>
-
                     </div>
 
                     <div class="group1">

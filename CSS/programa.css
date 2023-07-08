@@ -71,6 +71,8 @@ header label:hover{
 
 
 .menu li:hover{
+    cursor: pointer;
+
     background: rgb(102, 102, 102);
     font-style: italic;
 }
@@ -89,6 +91,18 @@ header label:hover{
 
 .menu li a:hover{
     color: white;
+}
+
+.menu .blocked a{
+    color: rgb(106,35,221); 
+    font-style: italic; 
+    cursor: default; 
+    pointer-events: none;
+}
+
+.menu .blocked:hover{
+    cursor: default;
+    background-color: white;
 }
 
 /*
@@ -113,7 +127,6 @@ header label:hover{
     display: flex;
 
     width: 100%;
-
     flex-direction: column;
 }
 
@@ -161,11 +174,10 @@ header label:hover{
 
 
 .btn-variable{
-    width: 70%;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
-
     align-items: center;
 }
 
@@ -203,9 +215,11 @@ header label:hover{
 #volver{
     background: url(../IMG/volver.jpeg);
     background-repeat: no-repeat;
-    background-size: 300px 180px;
+    background-size: 315px 190px;
+    background-position: center;
 
     height: 180px;
+    width: 300px;
 
     border: none;
 }
@@ -220,7 +234,7 @@ header label:hover{
 
 .btn-variable button:active{
     background-color: rgb(174,158,106);
-    transform: scale(.95);
+    transform: scale(.95);  /* ERROR DE BOTON */
 }
 
 .btn-variable img{
@@ -229,7 +243,6 @@ header label:hover{
 
     border: 2px solid black;
 }
-
 
 
 .btn-fijo{
@@ -275,6 +288,7 @@ header label:hover{
     width: 100px;
     height: 100px;
 }
+
 /*
 ===================================================
 ===================================================
@@ -292,6 +306,10 @@ header label:hover{
 
 
 @media (max-width:930px){
+    body{
+        max-width: 930px;
+    }
+
     header{
         position: fixed;
 
@@ -353,7 +371,6 @@ header label:hover{
         margin: 0;
     }
 
-
     .botones{
         flex-direction: column;
     }
@@ -373,6 +390,7 @@ header label:hover{
         flex-direction: column;
         align-items: center;
     }
+    
 }
 
 
@@ -380,6 +398,7 @@ header label:hover{
 
 body::-webkit-scrollbar{
     width: 15px;
+    z-index: 1000;
 }
 
 
@@ -387,11 +406,14 @@ body::-webkit-scrollbar-thumb{
     background-color: rgb(199,181,120);
     border-radius: 5px;
     border: 2px solid black;
+    
+    z-index: 1000;
 }
 
 
 .text-area::-webkit-scrollbar{
     width: 10px;
+    z-index: 1000;
 }
 
 
@@ -399,4 +421,5 @@ body::-webkit-scrollbar-thumb{
     background-color: rgb(199,181,120);
     border-radius: 5px;
     border: 2px solid black;
+    z-index: 1000;
 }

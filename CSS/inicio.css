@@ -277,6 +277,18 @@ body{
     border: 1px solid #BBBBBB;
 }
 
+.popup .contenedor-inputs select{
+    width: 100%;
+    margin-bottom: 20px;
+    height: 52px;
+    line-height: 52px;
+
+    font-size: 18px;
+    text-align: center;
+
+    border: 1px solid #BBBBBB;
+}
+
 
 .popup .btn-form{
     text-decoration: none;

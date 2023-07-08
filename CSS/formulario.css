@@ -29,7 +29,7 @@ header{
 }
 
 
-header label{
+header .menu-icon{
     display: none;
 
     align-items: center;
@@ -44,10 +44,10 @@ header label{
     border: 3px solid black;
 }
 
-header label:hover{
+header .menu-icon:hover{
     cursor: pointer;
 
-    color: rgb(33, 20, 228);
+    color: black;
     font-style: italic;
 
     background: rgba(0, 0, 0, 0.1);
@@ -97,6 +97,17 @@ header label:hover{
     color: white;
 }
 
+.menu .blocked a{
+    color: rgb(106,35,221); 
+    font-style: italic; 
+    cursor: default; 
+    pointer-events: none;
+}
+
+.menu .blocked:hover{
+    background-color: white;
+}
+
 /*
 ===================================================
 ===================================================
@@ -140,15 +151,13 @@ h1{
     font-weight: 700;
 }
 
-form{
+
+.form{
     background: white;
     padding: 40px 0;
     box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
     border-radius: 10px;
-}
 
-
-.form{
     width: 100%;
     margin: auto;
 }
@@ -178,7 +187,8 @@ input:focus{
 }
 
 
-label{
+
+.label-form{
     color: rgba(94, 91, 93, 1.0);
     font-size: 16px;
     position: absolute;
@@ -189,8 +199,8 @@ label{
     pointer-events: none;
 }
 
-input:focus~label,
-input:valid~label{
+input:focus~.label-form,
+input:valid~.label-form{
     top:  -14px;
     font-size: 12px;
     color: #2196F3;
@@ -202,7 +212,6 @@ input:valid~label{
     display: block;
     width: 100%;
 }
-
 
 .barra::before{
     content: "";
@@ -220,6 +229,41 @@ input:focus~.barra::before{
     width: 100%;
 }
 
+
+select{
+    display: block;
+
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 10px 10px 5px;
+
+    color: #c6c6c6;
+    font-size: 18px;
+
+    background: none;
+    border-radius: 1px;
+    border: none;
+    border-bottom: 1px solid var(--colorTexto);
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+select:focus{
+    outline: none;
+    background: transparent;
+    color: rgba(94, 91, 93, 1.0);
+}
+
+select:focus~.label-form,
+select:valid~.label-form{
+    top:  -14px;
+    font-size: 12px;
+    color: #2196F3;
+}
+
+select:focus~.barra::before{
+    width: 100%;
+}
 
 
 .botones{
@@ -246,12 +290,6 @@ input:focus~.barra::before{
 }
 
 
-@media screen and (max-width: 500px){
-    .form{
-        width: 80%;
-    }
-}
-
 /*
 ===================================================
 ===================================================
@@ -265,8 +303,13 @@ input:focus~.barra::before{
         margin-top: -90px;
         z-index: 1000;
     }
-    header label{
-        display: block;
+
+    .cuerpo{
+        margin-top: 90px;
+    }
+
+    header .menu-icon{
+        display: flex;
     }
 
     .menu{
@@ -290,10 +333,6 @@ input:focus~.barra::before{
 
     #btn-menu:checked ~ .menu{
         margin: 0;
-    }
-
-    .cuerpo{
-        margin-top: 90px;
     }
 }
 
